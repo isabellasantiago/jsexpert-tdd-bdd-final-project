@@ -1,1 +1,23 @@
-[{"id":"292358fe-c475-4626-9342-ee258f95da0e","name":"Prius","releaseYear":2024,"available":true,"gasAvailable":true},{"id":"f2926ad8-8aa2-4e04-aec6-e67eebe467c3","name":"Sentra","releaseYear":2024,"available":true,"gasAvailable":true},{"id":"6032081a-eb2d-453d-920e-7a13ee53c8ac","name":"Wrangler","releaseYear":2024,"available":true,"gasAvailable":true}]
+[
+  {
+    "id": "292358fe-c475-4626-9342-ee258f95da0e",
+    "name": "Prius",
+    "releaseYear": 2024,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "f2926ad8-8aa2-4e04-aec6-e67eebe467c3",
+    "name": "Sentra",
+    "releaseYear": 2024,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "6032081a-eb2d-453d-920e-7a13ee53c8ac",
+    "name": "Wrangler",
+    "releaseYear": 2024,
+    "available": true,
+    "gasAvailable": true
+  }
+]

@@ -1,1 +1,17 @@
-[{"id":"ccfb9b26-ee16-472f-9784-4ec844672244","name":"Forrest Swaniawski","age":36},{"id":"5d3c9fa5-57ff-4c0a-9832-3b4402e0c10a","name":"Thomas Ruecker","age":30},{"id":"fb7dc98c-aa81-40c3-815a-dc89689f3c5e","name":"Georgia Hills","age":33}]
+[
+  {
+    "id": "ccfb9b26-ee16-472f-9784-4ec844672244",
+    "name": "Forrest Swaniawski",
+    "age": 36
+  },
+  {
+    "id": "5d3c9fa5-57ff-4c0a-9832-3b4402e0c10a",
+    "name": "Thomas Ruecker",
+    "age": 30
+  },
+  {
+    "id": "fb7dc98c-aa81-40c3-815a-dc89689f3c5e",
+    "name": "Georgia Hills",
+    "age": 33
+  }
+]

@@ -2,18 +2,24 @@
   "name": "jsexpert-tdd-bdd-final-project",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node ./seed"
+  "directories": {
+    "test": "test"
   },
-  "engines": {
-    "node": "18.14.2"
+  "scripts": {
+    "test:dev": "npx mocha -w --parallel test/**/*.test.js",
+    "test": "npx mocha test/**/*.test.js",
+    "test:cov": "npx nyc npx mocha --parallel test/**/*.test.js",
+    "seed": "node ./seed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "faker": "^5.1.0"
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "faker": "^5.1.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.1"
   }
 }
