@@ -6,8 +6,10 @@
     "test": "test"
   },
   "scripts": {
+    "start": "node src/presentation/api.js",
     "test:dev": "npx mocha -w --parallel test/**/*.test.js",
     "test": "npx mocha test/**/*.test.js",
+    "test:e2e": "npx mocha -w test/**/*.test.js",
     "test:cov": "npx nyc npx mocha --parallel test/**/*.test.js",
     "seed": "node ./seed"
   },
@@ -20,6 +22,7 @@
     "faker": "^5.1.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.1"
+    "sinon": "^9.2.1",
+    "supertest": "6.3"
   }
 }
