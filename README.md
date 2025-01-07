@@ -86,6 +86,8 @@ Its sole purpose is to teach and practice the **foundations of testing**.
 ## Running Tests
 This project includes a robust testing setup, achieving __100% coverage__ 😉.
 
+![coverage](assets/coverage.png)
+
 ### Available Test Scripts
 - `npm run test:dev` : Runs unit and e2e tests in watch mode.
 - `npm run test:e2e` : Runs only e2e tests in watch mode.
