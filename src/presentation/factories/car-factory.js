@@ -1,11 +1,13 @@
-const makeCarServiceRent = () => {
-  const carsDatabase = join(__dirname, "./../../database", "cars.json");
+const { join } = require("path");
+
+const makeCarService = () => {
+  const carsDatabase = join(__dirname, "../../../database", "cars.json");
   const CarService = require("../../../src/service/carService");
   const carService = new CarService({
     cars: carsDatabase,
   });
 
-  return carService.rent;
+  return carService;
 };
 
-module.exports = makeCarServiceRent;
+module.exports = makeCarService;

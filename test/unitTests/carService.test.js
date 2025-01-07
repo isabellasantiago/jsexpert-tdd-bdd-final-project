@@ -121,7 +121,11 @@ describe("CarService Suite Tests", () => {
 
     //age: 50, tax: 1.1, categoryPrice: 37.6
     const expectedAmount = carService.currencyFormat.format(244.4);
-    const result = await carService.rent(customer, carCategory, numberOfDays);
+    const result = await carService.rent({
+      customer,
+      carCategory,
+      numberOfDays,
+    });
 
     const expected = new Transaction({
       customer,
