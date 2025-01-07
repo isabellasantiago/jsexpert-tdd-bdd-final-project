@@ -54,8 +54,4 @@ const write = (filename, data) =>
   await write("cars.json", cars);
   await write("customers.json", customers);
   await write("carCategories.json", [carCategory]);
-
-  console.log("cars", cars);
-  console.log("customers", customers);
-  console.log("carCategory", carCategory);
 })();
