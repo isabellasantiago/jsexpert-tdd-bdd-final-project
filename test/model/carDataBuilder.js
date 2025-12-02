@@ -17,22 +17,27 @@ class CarDataBuilder {
 
   withInvalidId() {
     this.carData.id = 1;
+    return this;
   }
 
   withInvalidName() {
     this.carData.name = "";
+    return this;
   }
 
   withInvalidReleaseYear() {
     this.carData.releaseYear = 2030;
+    return this;
   }
 
   withInvalidAvailable() {
-    this.carData.available = 'invalid';
+    this.carData.available = "invalid";
+    return this;
   }
 
-  withInvalidGasAvailable(){
-    this.carData.gasAvailable = 'no';
+  withInvalidGasAvailable() {
+    this.carData.gasAvailable = "no";
+    return this;
   }
 
   build() {

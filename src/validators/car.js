@@ -1,5 +1,5 @@
 /**PARAMOS EM AJUSTAR O VALIDATOR DE CAR
- * 
+ *
  * FALTA:
  * - [] criar teste de CarDataBuilder
  * - [] criar objectMother de Car
@@ -17,38 +17,55 @@
  * - [] criar objectMother de Customer
  * - [] criar teste de objectMother de Customer
  */
-
 /*
     Id: should be uuid
-    Name: should be string
+    Name: should be string and not empty
     ReleaseYear: should be number and should'nt be more than current year
     Available: should be boolean
     GasAvailable: should be boolean
 */
+
+const { validateUUID } = require("../functions/uui-validator");
+
 function carValidator(car) {
   const errors = [];
 
-  if (!(car.id.length >= 2 && car.id <= 20) || car.id === "") {
+  if (!validateUUID(car.id)) {
+    errors.push(`id: invalid value, current [${car.id}] expected to be uuid`);
+  }
+
+  if (
+    !(
+      typeof car.name === "string" &&
+      car.name.length > 0 &&
+      !/\s/.test(car.name)
+    )
+  ) {
     errors.push(
-      `id: invalid length, current [${car.id}] expected to be between 2 and 20`
+      `name: invalid value, current [${car.name}] expected to have only words and not be empty`
     );
   }
 
-  if (/(\W|\d)/.test(car.name)) {
+  if (
+    !(
+      typeof car.releaseYear === "number" &&
+      car.releaseYear <= new Date().getFullYear()
+    )
+  ) {
     errors.push(
-      `name: invalid value, current [${car.name}] expected to have only words`
+      `releaseYear: invalid value, current [${car.releaseYear}] expected to be number and less or equal than current year`
     );
   }
 
-  if (!(car.price >= 1 && car.price <= 1000)) {
+  if (!(typeof car.available === "boolean")) {
     errors.push(
-      `price: invalid value, current [${car.price}] expected to be between 1 and 1000`
+      `available: invalid value, current [${car.available}] expected to be boolean`
     );
   }
 
-  if (!["electronic", "organic"].includes(car.category)) {
+  if (!(typeof car.gasAvailable === "boolean")) {
     errors.push(
-      `category: invalid value, current [${car.category}] expected to be either electronic or organic`
+      `gasAvailable: invalid value, current [${car.gasAvailable}] expected to be boolean`
     );
   }
 
@@ -57,3 +74,7 @@ function carValidator(car) {
     errors,
   };
 }
+
+module.exports = {
+  carValidator,
+};
