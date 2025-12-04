@@ -9,6 +9,7 @@
     "start": "node src/presentation/api.js",
     "test:dev": "npx mocha -w --parallel test/**/*.test.js",
     "test": "npx mocha test/**/*.test.js",
+    "test:unit": "npx mocha test/unitTests/*.test.js",
     "test:e2e": "npx mocha -w test/e2eTests/*.test.js",
     "test:cov": "npx nyc npx mocha --parallel test/**/*.test.js",
     "seed": "node ./seed"

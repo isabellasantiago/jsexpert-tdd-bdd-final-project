@@ -2,14 +2,8 @@
  *
  * FALTA:
  * - [x] criar teste de CarDataBuilder
- * - [] criar objectMother de Car
- * - [] criar teste de objectMother de Car
- * - [] criar categoryDataBuilder
- * - [] definir regra de Category
- * - [] criar validator de category
- * - [] criar teste de CategoryDataBuilder
- * - [] criar objectMother de Category
- * - [] criar teste de objectMother de Category
+ * - [x] criar objectMother de Car
+ * - [x] criar teste de objectMother de Car
  * - [] criar CustomerDataBuilder
  * - [] definir regra de Customer
  * - [] criar validator de Customer
