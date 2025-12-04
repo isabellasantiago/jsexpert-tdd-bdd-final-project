@@ -1,7 +1,7 @@
 /**PARAMOS EM AJUSTAR O VALIDATOR DE CAR
  *
  * FALTA:
- * - [] criar teste de CarDataBuilder
+ * - [x] criar teste de CarDataBuilder
  * - [] criar objectMother de Car
  * - [] criar teste de objectMother de Car
  * - [] criar categoryDataBuilder
