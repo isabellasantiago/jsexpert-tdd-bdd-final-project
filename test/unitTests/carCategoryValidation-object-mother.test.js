@@ -29,6 +29,20 @@ describe("Test CarCategory Object Mother", () => {
       expect(result).to.be.deep.equal(expected);
     });
 
+    it("should return an object error when creating a carCategory with invalid name", () => {
+      const carCategory = CarCategoryObjectMother.withInvalidName();
+
+      const result = carCategoryValidator(carCategory);
+      const expected = {
+        errors: [
+          "name: invalid value, current [] expected to have only words and not be empty",
+        ],
+        result: false,
+      };
+
+      expect(result).to.be.deep.equal(expected);
+    });
+
     it("should return an object error when creating a carCategory with invalid carIds", () => {
       const carCategory = CarCategoryObjectMother.withInvalidCarIds();
 

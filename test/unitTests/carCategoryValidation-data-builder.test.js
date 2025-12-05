@@ -48,6 +48,20 @@ describe("Test CarCategory Data Builder", () => {
       expect(result).to.be.deep.equal(expected);
     });
 
+    it("should return an object error when creating a carCategory with invalid name", () => {
+      const carCategory = CarCategoryDataBuilder.aCarCategory().withInvalidName().build();
+
+      const result = carCategoryValidator(carCategory);
+      const expected = {
+        errors: [
+          "name: invalid value, current [] expected to have only words and not be empty",
+        ],
+        result: false,
+      };
+
+      expect(result).to.be.deep.equal(expected);
+    });
+
     it("should return an object error when creating a carCategory with invalid price", () => {
       const carCategory = CarCategoryDataBuilder.aCarCategory()
         .withInvalidPrice()

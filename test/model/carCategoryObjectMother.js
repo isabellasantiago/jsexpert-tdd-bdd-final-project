@@ -9,6 +9,10 @@ class CarCategoryObjectMother {
     return CarCategoryDataBuilder.aCarCategory().withInvalidId().build();
   }
 
+  static withInvalidName() {
+    return CarCategoryDataBuilder.aCarCategory().withInvalidName().build();
+  }
+
   static withInvalidCarIds() {
     return CarCategoryDataBuilder.aCarCategory().withInvalidCarIds().build();
   }

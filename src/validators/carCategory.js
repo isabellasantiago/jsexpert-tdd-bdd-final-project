@@ -17,6 +17,18 @@ function carCategoryValidator(carCategory) {
   }
 
   if (
+    !(
+      typeof carCategory.name === "string" &&
+      carCategory.name.length > 0 &&
+      !/\s/.test(carCategory.name)
+    )
+  ) {
+    errors.push(
+      `name: invalid value, current [${carCategory.name}] expected to have only words and not be empty`
+    );
+  }
+
+  if (
     !Array.isArray(carCategory.carIds) ||
     !carCategory.carIds.every((id) => validateUUID(id))
   ) {
@@ -25,7 +37,7 @@ function carCategoryValidator(carCategory) {
     );
   }
 
-  if ((typeof carCategory.price !== "number" || carCategory.price > 1000)) {
+  if (typeof carCategory.price !== "number" || carCategory.price > 1000) {
     errors.push(
       `price: invalid value, current [${carCategory.price}] expected to be number and should'nt be more than a thousand`
     );
