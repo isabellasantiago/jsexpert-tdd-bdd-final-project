@@ -1,14 +1,13 @@
 const { expect } = require("chai");
 const { it, describe } = require("mocha");
 const { carCategoryValidator } = require("../../src/validators/carCategory");
-const CarCategoryDataBuilder = require("../model/carCategoryDataBuilder");
+const CarCategoryObjectMother = require("../model/carCategoryObjectMother");
 
-describe("Test CarCategory Data Builder", () => {
+describe("Test CarCategory Object Mother", () => {
   it("shouldn't return error with valid carCategory", () => {
-    const carCategory = CarCategoryDataBuilder.aCarCategory().build();
+    const carCategory = CarCategoryObjectMother.valid();
 
     const result = carCategoryValidator(carCategory);
-
     const expected = {
       errors: [],
       result: true,
@@ -17,11 +16,9 @@ describe("Test CarCategory Data Builder", () => {
     expect(result).to.be.deep.equal(expected);
   });
 
-  describe("CarCategory Validation Rules", () => {
+  describe("CarCategory Object Mother Validation Rules", () => {
     it("should return an object error when creating a carCategory with invalid id", () => {
-      const carCategory = CarCategoryDataBuilder.aCarCategory()
-        .withInvalidId()
-        .build();
+      const carCategory = CarCategoryObjectMother.withInvalidId();
 
       const result = carCategoryValidator(carCategory);
       const expected = {
@@ -33,9 +30,7 @@ describe("Test CarCategory Data Builder", () => {
     });
 
     it("should return an object error when creating a carCategory with invalid carIds", () => {
-      const carCategory = CarCategoryDataBuilder.aCarCategory()
-        .withInvalidCarIds()
-        .build();
+      const carCategory = CarCategoryObjectMother.withInvalidCarIds();
 
       const result = carCategoryValidator(carCategory);
       const expected = {
@@ -49,9 +44,7 @@ describe("Test CarCategory Data Builder", () => {
     });
 
     it("should return an object error when creating a carCategory with invalid price", () => {
-      const carCategory = CarCategoryDataBuilder.aCarCategory()
-        .withInvalidPrice()
-        .build();
+      const carCategory = CarCategoryObjectMother.withInvalidPrice();
 
       const result = carCategoryValidator(carCategory);
       const expected = {

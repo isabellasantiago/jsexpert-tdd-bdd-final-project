@@ -1,16 +1,3 @@
-/**PARAMOS EM AJUSTAR O VALIDATOR DE CAR
- *
- * FALTA:
- * - [x] criar teste de CarDataBuilder
- * - [x] criar objectMother de Car
- * - [x] criar teste de objectMother de Car
- * - [] criar CustomerDataBuilder
- * - [] definir regra de Customer
- * - [] criar validator de Customer
- * - [] criar teste de CustomerDataBuilder
- * - [] criar objectMother de Customer
- * - [] criar teste de objectMother de Customer
- */
 /*
     Id: should be uuid
     Name: should be string and not empty
